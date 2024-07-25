@@ -34,13 +34,17 @@ label {
 }
 
 input type[text], type[password]{
+
     margin-bottom: 10px;
-    width: 100% padding: 8px;
-    border: 1px solid #ccc;
+    width: 100% 
+    padding: 8px;
+    border: 1px 
+    solid: #ccc;
     border-radius: 4px;
 
-
 }
+
+
 
 button {
     @include botao-estilizado($cor-login-sucedido)
