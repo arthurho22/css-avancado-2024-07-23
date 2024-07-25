@@ -1,37 +1,39 @@
-.color-1 {
-  width: 20%;
-  background-color: aqua;
-  margin-bottom: 10px;
+.btn.small {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
 }
-
-.color-2 {
-  width: 40%;
-  background-color: aqua;
-  margin-bottom: 10px;
+.btn.small:hover {
+  background-color: #0062cc;
 }
-
-.color-3 {
-  width: 60%;
-  background-color: aqua;
-  margin-bottom: 10px;
+.btn.medium {
+  background-color: #6c757d;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 16px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
 }
-
-.color-4 {
-  width: 80%;
-  background-color: aqua;
-  margin-bottom: 10px;
+.btn.medium:hover {
+  background-color: #545b62;
 }
-
-.color-5 {
-  width: 100%;
-  background-color: aqua;
-  margin-bottom: 10px;
+.btn.large {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 16px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
 }
-
-/*
-100% / 5 * 1 => 5 
-100% / 5 * 2 => 10
-100% / 5 * 3 => 15
-100% / 5 * 4 => 20
-100% / 5 * 5 => 25
-*//*# sourceMappingURL=index.css.map */
+.btn.large:hover {
+  background-color: #bd2130;
+}/*# sourceMappingURL=index.css.map */
