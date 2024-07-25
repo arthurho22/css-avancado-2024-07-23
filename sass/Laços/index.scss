@@ -1,41 +1,52 @@
-$cores: (
-    color-1:#FF5733,
-    color-2: #33FF57,
-    color-3: #3357FF,
-    color-4: #F333FF,
-    color-5: #33FFF5,
-    );
-
-    body{
-        background-color: black;
-        color:aliceblue
-    }
-
-    @each $nome, $cor in $cores {
-    .#{$nome}{
-    width: calc(100% / 5 * $i); 
-    background-color: $cor;
-    margin-bottom: 10px;
-    padding:10px;   
-    }
-    $i: $i + 1;
-    }
-    
+$cor-primary: #007BFF;
+$cor-secundary: #6c757d;
+$cor-danger: #dc3545;
 
 
-@for $i from 1 through 5 {
-    .color-#{$i} {
-        width: calc(100% / 5 * $i);
-        background-color: aqua;
-        margin-bottom: 10px;
-    }
+@mixin botao-estilo($padding) {
 
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: $padding;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
-/*
-100% / 5 * 1 => 5 
-100% / 5 * 2 => 10
-100% / 5 * 3 => 15
-100% / 5 * 4 => 20
-100% / 5 * 5 => 25
-*/
+@mixin botao-estilo-cor($cor-fundo) {
+    background-color: $cor-fundo;
+
+    &:hover {
+        background-color: darken($cor-fundo, 10%);
+
+    }
+}
+
+
+.btn {
+    &.small {
+        @include botao-estilo(8px 12px, #007BFF);
+    }
+
+    &.medium {
+        @include botao-estilo(12px 16px, #6c757d);
+    }
+
+    &.large {
+        @include botao-estilo(16px 20px, #dc3545);
+    }
+}
+
+
+&.primary{
+    @include botao-estilo-cor($cor-primary);
+}
+
+&.secundary{
+    @include botao-estilo-cor($cor-secundary);
+}
+
+&.danger{
+    @include botao-estilo-cor($cor-danger);
+}
